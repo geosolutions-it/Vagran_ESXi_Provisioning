@@ -4,12 +4,12 @@ Project with examples on how to provision vms with vagrant to a EXSi hypervisor.
 
 ## Prerequisites
 
-1. Vagrant 2.2.6
-2. Vagrant plugins:
-   2.1. vagrant-vmware-esxi
-   2.2. vagrant-winrm-syncedfolders
-   2.3. vagrant-reload
-3. OVF 4.2.0
+- Vagrant 2.2.6
+- Vagrant plugins
+  - vagrant-vmware-esxi
+  - vagrant-winrm-syncedfolders
+  - vagrant-reload
+- OVF 4.2.0
 
 ## Installation
 
