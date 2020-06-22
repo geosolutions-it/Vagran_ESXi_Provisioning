@@ -246,14 +246,14 @@ $mgmt_cidr = '/24'
 $mgmt_gw = '145.239.232.254'
 
 #  Inline provisioning script
-$script = <<SCRIPT
-INTERFACE=`ip a|grep ^2: |awk -F":" '{print $2}'`
-sudo rm -fr /etc/sysconfig/network-scripts/ifcfg-$INTERFACE
-sudo /usr/bin/nmcli con mod $INTERFACE ip4 ${1}${2} ipv4.method manual ipv4.gateway $3
-sudo /usr/bin/nmcli con mod $INTERFACE connection.autoconnect on
-SCRIPT
-config.vm.provision "shell" do |s|
-  s.inline = $script
-  s.args   = [ $mgmt_ip , $mgmt_cidr , $mgmt_gw ]
-end
+# $script = <<SCRIPT
+# INTERFACE=`ip a|grep ^2: |awk -F":" '{print $2}'`
+# sudo rm -fr /etc/sysconfig/network-scripts/ifcfg-$INTERFACE
+# sudo /usr/bin/nmcli con mod $INTERFACE ip4 ${1}${2} ipv4.method manual ipv4.gateway $3
+# sudo /usr/bin/nmcli con mod $INTERFACE connection.autoconnect on
+# SCRIPT
+# config.vm.provision "shell" do |s|
+#   s.inline = $script
+#   s.args   = [ $mgmt_ip , $mgmt_cidr , $mgmt_gw ]
+# end
 end
