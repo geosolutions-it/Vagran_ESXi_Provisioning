@@ -101,7 +101,8 @@ Vagrant.configure('2') do |config|
     #    so, you will need a DHCP server for each virtual network.  To set a
     #    static IP for interface 2, 3 or 4. see above 'config.vm.network'.
     #esxi.esxi_virtual_network = ['VM Network','VM Network 2','VM Network 3','VM Network 4']
-    esxi.esxi_virtual_network = ['EMSA Networking','VM Network']
+    # esxi.esxi_virtual_network = ['EMSA Networking','VM Network']
+    esxi.esxi_virtual_network = ['VM Network']
 
     #  OPTIONAL.  Specify a Disk Store
     #    If it's not specified, the Default is to use the least used Disk Store.
@@ -168,7 +169,8 @@ Vagrant.configure('2') do |config|
     #    duplicating the MAC address.
     #    *** Invalid settings could cause 'vagrant up' to fail ***
     #esxi.guest_mac_address = ['00:50:56:aa:bb:cc', '00:50:56:01:01:01','00:50:56:02:02:02','00:50:56:BE:AF:01' ]
-    esxi.guest_mac_address = ['00:50:56:aa:bb:cc', '00:50:56:04:4c:22']
+    esxi.guest_mac_address = ['00:50:56:04:4c:22']
+    # esxi.guest_mac_address = ['00:50:56:aa:bb:cc', '00:50:56:04:4c:22']
     #   OPTIONAL & RISKY.  Specify a guest_nic_type
     #     The default is to have the virtual nic hw type automatically
     #     determined by the ovftool.  However, you can override it by specifying
